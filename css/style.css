@@ -1473,7 +1473,9 @@ img {
   left: -35px;
   width: 23px;
   height: 23px;
-  background-image: url("../images/icons/checkbox-off.svg");
+  background-image:
+    url("../images/icons/checkbox-off.svg"),
+    url("../images/icons/checkbox-off-hover.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1485,7 +1487,9 @@ img {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../images/icons/checkbox-on.svg");
+  background-image:
+    url("../images/icons/checkbox-on.svg"),
+    url("../images/icons/checkbox-on-hover.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
