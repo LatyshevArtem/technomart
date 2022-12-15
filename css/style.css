@@ -1925,12 +1925,14 @@ img {
 /* Modal */
 
 .modal {
-  position: relative;
+  position: fixed;
   display: none;
   width: 620px;
+  border-top: 7px solid var(--basic-red-100);
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 100;
 }
 
 .modal button,
@@ -1951,7 +1953,7 @@ img {
   cursor: pointer;
 }
 
-.modal-goods-added::before,
+/* .modal-goods-added::before,
 .modal-feedback::before {
   content: "";
   position: absolute;
@@ -1959,16 +1961,18 @@ img {
   left: 0;
   width: 100%;
   height: 7px;
-}
+} */
 
 /* Modal goods added */
 
-.modal-goods-added::before {
+/* .modal-goods-added::before {
   background-color: var(--basic-red-100);
-}
+} */
 
 .modal-goods-added {
-  display: flex;
+  top: calc(50% - 141px);
+  left: calc(50% - 310px);
+  display: none;
   flex-direction: column;
 }
 
@@ -2047,18 +2051,21 @@ img {
 
 /* Modal feedback */
 
-.modal-feedback::before {
+/* .modal-feedback::before {
   background-color: var(--modal-feedback-top-bar);
-}
+} */
 
 .modal-feedback {
-  display: flex;
+  top: calc(50% - 215px);
+  left: calc(50% - 310px);
+  display: none;
   flex-direction: column;
+  border-color: var(--modal-feedback-top-bar);
 }
 
 .modal-feedback .modal-close {
   align-self: flex-end;
-  margin-top: 21px;
+  margin-top: 14px;
   margin-right: 11px;
   margin-bottom: 4px;
 }
@@ -2086,6 +2093,7 @@ img {
 .feedback-form-textarea textarea {
   box-sizing: border-box;
   display: block;
+  width: 100%;
   margin-top: 11px;
   border: 2px solid var(--basic-grey-400);
   border-radius: 2px;
@@ -2130,4 +2138,24 @@ img {
 
 .modal-feedback-submit-button-wrapper button:active {
   background-color: var(--error);
+}
+
+/* Modal map */
+
+.modal-map {
+  top: calc(50% - 449px / 2);
+  left: calc(50% - 943px / 2);
+  display: none;
+  width: 943px;
+  height: 442px;
+}
+
+.modal-map .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-map iframe {
+  border: 0;
 }
